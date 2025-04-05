@@ -1,0 +1,45 @@
+获取数据列表
+This is the language awesomeness API
+Call this api passing a language name and get back its features
+    ---
+    tags:
+      - xxx API
+    description: ""
+    parameters:
+      - name: page_size
+        in: query
+        type: integer
+        description:  size of each data page
+        required: false
+      - name: page_num
+        in: query
+        type: integer
+        description: page of data list
+        required: false
+      - name: status_s
+        in: query
+        type: string
+        description: data status
+        required: false
+    responses:
+      500:
+        description: Error get data list failed!
+      200:
+        description: The data list
+        content:
+            application/json:
+              examples: # Multiple examples
+                200: #
+                  value: {
+                    "code": 200,
+                    "total": 2,
+                    "page_num": 1,
+                    "page_size": 20,
+                    "data": [{xxx
+                    },{
+                    xxx
+                    }]
+                  }
+                  summary: "相应Collection定义的JSON格式数据记录"  # Optional description
+
+
